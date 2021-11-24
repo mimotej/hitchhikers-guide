@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting started with Operate First &#8212; Hitchhiker&#39;s Guide to Operate First</title>
+
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to onboard a new project to a cluster on Operate First" href="onboarding_project.html" />
+    <link rel="prev" title="Increase size of a PVC in JupyterHub" href="increase_pvc_size.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+
+
+    <!-- Google Analytics -->
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+
+    <div class="container-fluid" id="banner"></div>
+
+
+
+    <div class="container-xl">
+      <div class="row">
+
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+
+
+
+      <img src="../_static/icon.png" class="logo" alt="logo">
+
+
+      <h1 class="site-logo" id="site-title">Hitchhiker's Guide to Operate First</h1>
+
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Welcome to Hitchhiker’s Guide to Operate First!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="operate_first_support.html">
+   Operate First Support
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="jupyterhub.html">
+   JupyterHub
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="increase_pvc_size.html">
+     Increase size of a PVC in JupyterHub
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Getting started with Operate First
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="onboarding_project.html">
+     How to onboard a new project to a cluster on Operate First
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="onboarding_new_cluster.html">
+     How to add a new cluster to Operate First
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+
+
+
+
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/pages/getting_started.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/operate-first/hitchhikers-guide"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+
+
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#there-are-3-parts-to-operating-first">
+   There are 3 parts to Operating First
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observing-and-interacting-with-the-ops-team">
+   Observing and interacting with the Ops team
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bring-your-project">
+   Bring your project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#understanding-the-environment">
+   Understanding the environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operate-first-managed-clusters">
+   Operate First managed clusters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#moc-environment">
+     MOC environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hetzner-environment">
+     Hetzner Environment
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+
+              <div>
+
+  <div class="tex2jax_ignore mathjax_ignore section" id="getting-started-with-operate-first">
+<span id="references-operate-first-start"></span><h1>Getting started with Operate First<a class="headerlink" href="#getting-started-with-operate-first" title="Permalink to this headline">¶</a></h1>
+<p>If you are an open source developer interested in bringing your project to an Operate First environment, you have come to the right place. Below is important information and instructions on how to get started.</p>
+<div class="section" id="there-are-3-parts-to-operating-first">
+<h2>There are 3 parts to Operating First<a class="headerlink" href="#there-are-3-parts-to-operating-first" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Operate First is a concept of bringing pre-release open source software to a production cloud environment.</p></li>
+<li><p>The Open Infrastructure Labs is the upstream where the cloud operators and project developers work in the open to Operate First.</p></li>
+<li><p>The Mass Open Cloud (MOC) is a production cloud resource where projects are run.</p></li>
+</ol>
+</div>
+<div class="section" id="observing-and-interacting-with-the-ops-team">
+<h2>Observing and interacting with the Ops team<a class="headerlink" href="#observing-and-interacting-with-the-ops-team" title="Permalink to this headline">¶</a></h2>
+<p>Projects are expected to work with the ops team in the open in github <a class="reference external" href="https://github.com/operate-first">https://github.com/operate-first</a> There is also work done to manage the infrastructure that can be found in the Open Infrastructure Labs project <a class="reference external" href="https://github.com/open-infrastructure-labs">https://github.com/open-infrastructure-labs</a></p>
+<p>To see what’s happening right now, online chat is done at <a class="reference external" href="http://operatefirst.slack.com/">http://operatefirst.slack.com/</a>. There is an associated mailing list hosted by the MOC: Operate-first-users <a class="reference external" href="https://mail.massopen.cloud/mailman/listinfo/operate-first-users">https://mail.massopen.cloud/mailman/listinfo/operate-first-users</a></p>
+<p>Open Infrastructure Labs also has a mailing list: Openinfralabs <a class="reference external" href="http://lists.opendev.org/cgi-bin/mailman/listinfo/openinfralabs">http://lists.opendev.org/cgi-bin/mailman/listinfo/openinfralabs</a> You can view a dashboard in the OI Labs github to see an overview of what’s happening <a class="reference external" href="https://github.com/orgs/open-infrastructure-labs/projects/2">https://github.com/orgs/open-infrastructure-labs/projects/2</a></p>
+</div>
+<div class="section" id="bring-your-project">
+<h2>Bring your project<a class="headerlink" href="#bring-your-project" title="Permalink to this headline">¶</a></h2>
+<p>To get connected and investigate bringing your project to the MOC, you can join the general mailing list at <a class="reference external" href="https://listman.redhat.com/mailman/listinfo/operate-first">https://listman.redhat.com/mailman/listinfo/operate-first</a> and introduce it.</p>
+<p>Next step is bringing the discussion to the “Operate First Project Coordination meeting”, which is held on alternate Wednesday’s 8:30AM US Eastern time. (even numbered weeks for 2020) Meeting url: <a class="reference external" href="https://meet.google.com/kea-qtds-enp?authuser=0&amp;hs=122">https://meet.google.com/kea-qtds-enp?authuser=0&amp;hs=122</a>. (email <a class="reference external" href="mailto:bburns&#37;&#52;&#48;redhat&#46;com">bburns<span>&#64;</span>redhat<span>&#46;</span>com</a> for an invite).</p>
+<p>There is another bi-weekly meeting an the alternate Wednesdays at 8:30 AM US Eastern time, called “MOC/ODH sprint planning” and it is primarily focused on the Ops team planning. (Odd numbered weeks for 2021) Meeting url: <a class="reference external" href="https://meet.google.com/oki-drge-wuc?authuser=0&amp;hs=122">https://meet.google.com/oki-drge-wuc?authuser=0&amp;hs=122</a></p>
+<p>More detailed information on onboarding to a cluster can be found here: <a class="reference external" href="https://www.operate-first.cloud/users/support/docs/onboarding_to_cluster.md">https://www.operate-first.cloud/users/support/docs/onboarding_to_cluster.md</a></p>
+</div>
+<div class="section" id="understanding-the-environment">
+<h2>Understanding the environment<a class="headerlink" href="#understanding-the-environment" title="Permalink to this headline">¶</a></h2>
+<p>There are a few basic things that need to be understood about the Operate First environment at the MOC:
+-Operate First is an open source initiative. It’s about operating your project software in the open in a production cloud environment.
+-Operating at the MOC never implies that any feature or software will ship. Thus a new feature that is being considered can be tested without any implied commitment.
+-Open Infrastructure Labs is an open source upstream aimed at cloud providers and operators and that is where much of the operate first work is being done.
+-While a production cloud, the MOC is taking in pre-release software, and thus stability is not guaranteed, and should not be expected. No backup of user data is made. There is no SLA.
+-It’s free, but the cost is commitment. The MOC is not a place to bring a project and then leave. It’s expected that the developers will actively participate with the operators when needed and be available to help sort out issues.
+-The benefit to project developers is bringing back what’s learned to improve their project.
+-Also, projects need to agree that telemetry can be freely harvested from the cloud. It’s purpose is to help evolve open source cloud operations and it extends to building AI Ops tooling.</p>
+</div>
+<div class="section" id="operate-first-managed-clusters">
+<span id="references-clusters"></span><h2>Operate First managed clusters<a class="headerlink" href="#operate-first-managed-clusters" title="Permalink to this headline">¶</a></h2>
+<p>The Operate First manages currently clusters within two environments  mass open cloud (MOC) and Hetzner</p>
+<div class="section" id="moc-environment">
+<h3><a class="reference external" href="https://massopen.cloud/">MOC</a> environment<a class="headerlink" href="#moc-environment" title="Permalink to this headline">¶</a></h3>
+<p>The Operate First initiative currently manages two clusters within the MOC environment.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://console-openshift-console.apps.zero.massopen.cloud/"><code class="docutils literal notranslate"><span class="pre">Zero</span></code> cluster</a> for all user workloads</p></li>
+<li><p><a class="reference external" href="https://console-openshift-console.apps.moc-infra.massopen.cloud/"><code class="docutils literal notranslate"><span class="pre">Infra</span></code></a> cluster for cluster management, housing ACM and ArgoCD</p></li>
+</ul>
+</div>
+<div class="section" id="hetzner-environment">
+<h3><a class="reference external" href="https://www.hetzner.com/">Hetzner</a> Environment<a class="headerlink" href="#hetzner-environment" title="Permalink to this headline">¶</a></h3>
+<p>Operate First also deploys within EMEA region. Following clusters are deployed at Hetzner Cloud:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://console-openshift-console.apps.rick.emea.operate-first.cloud/"><code class="docutils literal notranslate"><span class="pre">Rick</span></code> cluster</a> for experimental user workloads</p></li>
+</ul>
+<p>Please create an issue <a class="reference external" href="https://github.com/operate-first/support/issues/new?assignees=first-operator&amp;labels=kind%2Fonboarding%2Carea%2Fcluster&amp;template=onboarding_to_cluster.yaml&amp;title=NEW+PROJECT%3A+%3Cname%3E">here</a> if you would like to use a cluster. Note that unless you want to use ACM or operate ArgoCD, you are likely looking for access to the Zero cluster.
+Managed Services
+Operate First manages various applications and services in the environments listed above. These services are accessible to the general public, and their availability dashboards can be found here.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Access to monitoring and dashboards (i.e. Prometheus and Grafana) is currently restricted, pending discussions on EULAs and data licensing. If you need to access these services in the meantime, please make an issue. We will do our best to accommodate your request.</p>
+</div>
+<!-- Both Read more links in ODH and Kubeflow are broken and might need fix later-->
+<ul class="simple">
+<li><p><a class="reference external" href="https://opendatahub.io/">Open Data Hub</a></p>
+<ul>
+<li><p>We manage a deployment of Open Data Hub (ODH) on the MOC Zero cluster</p></li>
+<li><p><a class="reference external" href="https://www.operate-first.cloud/users/support/4">Read more</a> about our deployment of ODH and access our <a class="reference external" href="https://odh.operate-first.cloud/">dashboard</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.kubeflow.org/">Kubeflow</a></p>
+<ul>
+<li><p>We deploy a selection of Kubeflow components on the MOC Zero cluster</p></li>
+<li><p><a class="reference external" href="https://www.operate-first.cloud/users/support/5">Read more</a> about our deployment of Kubeflow and access our dashboard</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://argoproj.github.io/argo-cd/">ArgoCD</a></p>
+<ul>
+<li><p>We manage a multi-tenant deployment of ArgoCD on the MOC Infra cluster</p></li>
+<li><p>Anyone can be onboarded to this ArgoCD instance and use it to deploy to any cluster managed by Operate First</p>
+<ul>
+<li><p>Before being onboarded to ArgoCD, you must be onboarded to the OCP cluster you wish to deploy your applications on</p></li>
+<li><p>Request access to an OCP cluster by filing an issue <a class="reference external" href="https://github.com/operate-first/support/issues/new?assignees=first-operator&amp;labels=kind%2Fonboarding%2Carea%2Fcluster&amp;template=onboarding_to_cluster.yaml&amp;title=NEW+PROJECT%3A+%3Cname%3E">here</a> and ArgoCD by filing an issue <a class="reference external" href="https://github.com/operate-first/support/issues/new?assignees=first-operator&amp;labels=kind%2Fonboarding%2Carea%2Fargocd&amp;template=onboarding_argocd.yaml&amp;title=PROJECT%3A+%3Cname%3E">here</a></p></li>
+</ul>
+</li>
+<li><p>Console: <a class="reference external" href="https://argocd.operate-first.cloud">https://argocd.operate-first.cloud</a></p></li>
+<li><p>Monitoring: <a class="reference external" href="https://grafana-route-opf-monitoring.apps.zero.massopen.cloud/d/97AYZMTGk/argocd?orgId=1">https://grafana-route-opf-monitoring.apps.zero.massopen.cloud/d/97AYZMTGk/argocd?orgId=1</a></p></li>
+</ul>
+</li>
+</ul>
+<!-- same as the above here has broken link -->
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/observatorium">Observatorium</a></p>
+<ul>
+<li><p>We have an instance of Observatorium currently being used to provision Thanos and Loki</p></li>
+<li><p>Thanos enables long term storage for Prometheus (deployed by ODH)</p>
+<ul>
+<li><p>Anyone can enable their applications deployed on Zero cluster to be monitored by this Prometheus instance</p></li>
+<li><p>To do so, follow the instructions <a class="reference external" href="https://github.com/operate-first/support/blob/main/docs/add_service_monitoring.md">here</a> and make a pull request against this repo</p></li>
+</ul>
+</li>
+<li><p>Loki is used to query logs; click <a class="reference external" href="https://www.operate-first.cloud/users/apps/docs/observatorium/loki/README.md">here</a> to learn more about sending or retrieving logs using Loki</p></li>
+<li><p>Thanos: <a class="reference external" href="http://thanos-query-frontend-opf-observatorium.apps.zero.massopen.cloud">http://thanos-query-frontend-opf-observatorium.apps.zero.massopen.cloud</a></p></li>
+<li><p>Monitoring: <a class="reference external" href="https://grafana-route-opf-monitoring.apps.zero.massopen.cloud/dashboards/f/VYns1DlGz/thanos">https://grafana-route-opf-monitoring.apps.zero.massopen.cloud/dashboards/f/VYns1DlGz/thanos</a></p></li>
+</ul>
+</li>
+</ul>
+<!--Kibana and route links are nonexistent-->
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.openshift.com/container-platform/4.7/logging/cluster-logging.html">Cluster Logging Operator</a></p>
+<ul>
+<li><p>We deploy the Cluster Logging Operator (CLO) with Elasticsearch and Kibana on the MOC Zero cluster</p></li>
+<li><p>Anyone who has been onboarded to the Zero cluster can access their application logs via <a class="reference external" href="https://kibana-openshift-logging.apps.zero.massopen.cloud/">Kibana</a></p></li>
+<li><p>You can also curl directly to Elasticsearch from this <a class="reference external" href="https://elasticsearch-openshift-logging.apps.zero.massopen.cloud/">route</a>, but you will need to provide your OCP bearer token</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://cloud.redhat.com/blog/introducing-openshift-container-storage-4-2">Openshift Container Storage</a></p>
+<ul>
+<li><p>We deploy the Openshift Container Storage (OCS) operator on the MOC Zero cluster</p></li>
+<li><p>OCS provides both persistent volumes and S3 compatible object storage via Rook Operator</p></li>
+<li><p>Users can deploy their own S3 buckets via ObjectBucketClaims - see <a class="reference external" href="https://rook.io/">here</a> for details</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/dexidp/dex">Dex OIDC Provider</a></p>
+<ul>
+<li><p>We manage an instance of Dex on the Zero cluster; we are working towards using Dex to provide authentication for some of our services</p></li>
+<li><p>Our Dex instance can also be used to drive authentication for other users. While documents are not yet available for this, experienced users can find the configurations here</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+
+
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="increase_pvc_size.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Increase size of a PVC in JupyterHub</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="onboarding_project.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How to onboard a new project to a cluster on Operate First</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+
+          By Operate First<br/>
+
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

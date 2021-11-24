@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to onboard a new project to a cluster on Operate First &#8212; Hitchhiker&#39;s Guide to Operate First</title>
+
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How to add a new cluster to Operate First" href="onboarding_new_cluster.html" />
+    <link rel="prev" title="Getting started with Operate First" href="getting_started.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+
+
+    <!-- Google Analytics -->
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+
+    <div class="container-fluid" id="banner"></div>
+
+
+
+    <div class="container-xl">
+      <div class="row">
+
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+
+
+
+      <img src="../_static/icon.png" class="logo" alt="logo">
+
+
+      <h1 class="site-logo" id="site-title">Hitchhiker's Guide to Operate First</h1>
+
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Welcome to Hitchhiker’s Guide to Operate First!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="operate_first_support.html">
+   Operate First Support
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="jupyterhub.html">
+   JupyterHub
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="increase_pvc_size.html">
+     Increase size of a PVC in JupyterHub
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="getting_started.html">
+   Getting started with Operate First
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     How to onboard a new project to a cluster on Operate First
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="onboarding_new_cluster.html">
+     How to add a new cluster to Operate First
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+
+
+
+
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/pages/onboarding_project.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/operate-first/hitchhikers-guide"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+
+
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+
+
+        <a class="jupyterhub-button" href="https://jupyterhub-opf-jupyterhub.apps.smaug.na.operate-first.cloud/hub/user-redirect/git-pull?repo=https://github.com/operate-first/hitchhikers-guide&urlpath=lab/tree/hitchhikers-guide/pages/onboarding_project.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+
+
+
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outcomes">
+   Outcomes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps">
+   Steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-important-variables">
+     1. Define important variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fork-and-clone-the-apps-repository">
+     2. Fork and clone the apps repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-namespaces">
+     3. Adding namespaces
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#base-resources">
+       Base resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-namespace-resources-to-the-target-cluster">
+     4. Adding namespace resources to the target cluster
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#populate-your-team">
+     5. Populate your team
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#finalize">
+   Finalize
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+
+              <div>
+
+  <div class="tex2jax_ignore mathjax_ignore section" id="how-to-onboard-a-new-project-to-a-cluster-on-operate-first">
+<h1>How to onboard a new project to a cluster on Operate First<a class="headerlink" href="#how-to-onboard-a-new-project-to-a-cluster-on-operate-first" title="Permalink to this headline">¶</a></h1>
+<p>This guide explains how you can onboard a new project to one of the Operate First clusters.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information about the Operate First see <a class="reference internal" href="getting_started.html#references-operate-first-start"><span class="std std-ref">Getting started with Operate First</span></a></p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>There are no prerequisites.</p></li>
+</ul>
+</div>
+<div class="section" id="outcomes">
+<h2>Outcomes<a class="headerlink" href="#outcomes" title="Permalink to this headline">¶</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A pull request against the <code class="docutils literal notranslate"><span class="pre">operate-first/apps</span></code> repository.</p></li>
+</ul>
+<p>The PR enables Operate First to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a namespace on the desired Operate First cluster.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add desired users as namespace admins to the specified namespace.</p></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>All manifests for all the workloads owned by Operate First Ops team are maintained in the <code class="docutils literal notranslate"><span class="pre">operate-first/apps</span></code> repository following the <a class="reference external" href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/">Kustomize best practices</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">cluster-scope</span></code> folder in this repo stores all privileged resources that are usually not allowed to be deployed by regular project admin and requires elevated access like cluster-admin role.</p>
+<p>If you want to know more about the overall design please consult Operate First’s <a class="reference external" href="https://www.operate-first.cloud/blueprints/blueprint/#architectural-decisions">Architectural Decision Records (ADR) archive</a>.</p>
+</div>
+<div class="section" id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="define-important-variables">
+<h3>1. Define important variables<a class="headerlink" href="#define-important-variables" title="Permalink to this headline">¶</a></h3>
+<p>In this guide we will use a couple of facts about the project. To make it easier to follow this guide, let’s define these values beforehand.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># User variables</span>
+<span class="n">GITHUB_USERNAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;JUPYTERHUB_USER&quot;</span><span class="p">)</span>  <span class="c1"># If this notebook is executed within Jupyter Hub on Operate First, you can use the `JUPYTERHUB_USER` variables instead</span>
+
+<span class="c1"># Namespace specific variables</span>
+<span class="n">NAMESPACE_NAME</span><span class="o">=</span><span class="s2">&quot;demo-project&quot;</span>
+<span class="n">NAMESPACE_DISPLAY_NAME</span><span class="o">=</span><span class="s2">&quot;Demo Project Namespace&quot;</span>
+<span class="n">TEAM_NAME</span><span class="o">=</span><span class="s2">&quot;demo-team&quot;</span>
+
+<span class="c1"># Target cluster variables</span>
+<span class="n">TARGET_CLUSTER_NAME</span> <span class="o">=</span> <span class="s2">&quot;demo&quot;</span>
+<span class="n">TARGET_CLUSTER_REGION</span> <span class="o">=</span> <span class="s2">&quot;emea&quot;</span>
+
+<span class="n">NAMESPACE_ADMINS_LST</span> <span class="o">=</span> <span class="p">[</span><span class="n">GITHUB_USERNAME</span><span class="p">,]</span> <span class="c1"># list of LOWERCASE github usernames of the namespace admins</span>
+
+<span class="n">TARGET_CLUSTER</span><span class="o">=</span><span class="n">TARGET_CLUSTER_REGION</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="n">TARGET_CLUSTER_NAME</span>
+
+<span class="n">NAMESPACE_ADMINS</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="n">u</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">NAMESPACE_ADMINS_LST</span><span class="p">])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fork-and-clone-the-apps-repository">
+<h3>2. Fork and clone the apps repository<a class="headerlink" href="#fork-and-clone-the-apps-repository" title="Permalink to this headline">¶</a></h3>
+<p>Please fork/clone the <a class="reference external" href="https://github.com/operate-first/apps">operate-first/apps</a> repository. We’ll be working within this repository only.</p>
+<ol class="simple">
+<li><p>Go to <a class="reference external" href="https://github.com/operate-first/apps">operate-first/apps</a>.</p></li>
+<li><p>Click on a fork button.</p></li>
+<li><p>When a fork is created click on the code button and copy an address of your forked repository.</p></li>
+<li><p>Run following command using copied address:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone https://github.com/<span class="o">{</span>GITHUB_USERNAME<span class="o">}</span>/apps.git
+<span class="o">%</span><span class="k">cd</span> apps
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning into &#39;apps&#39;...
+remote: Enumerating objects: 12377, done.
+remote: Counting objects: 100% (1658/1658), done.
+remote: Compressing objects: 100% (877/877), done.
+remote: Total 12377 (delta 743), reused 1561 (delta 686), pack-reused 10719
+Receiving objects: 100% (12377/12377), 2.63 MiB | 4.05 MiB/s, done.
+Resolving deltas: 100% (6003/6003), done.
+/home/anand/Documents/4n4nd/hitchhikers-guide/pages/apps
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="adding-namespaces">
+<h3>3. Adding namespaces<a class="headerlink" href="#adding-namespaces" title="Permalink to this headline">¶</a></h3>
+<p>For easier onboarding to ArgoCD later on, we prefer to follow a name pattern for all our namespaces. Please use your team name as a prefix to the namespace name like so: <code class="docutils literal notranslate"><span class="pre">$TEAM_NAME-example-project</span></code>.</p>
+<div class="section" id="base-resources">
+<h4>Base resources<a class="headerlink" href="#base-resources" title="Permalink to this headline">¶</a></h4>
+<p>To create necessary resources use opfcli which creates the following folders with files:</p>
+<ul class="simple">
+<li><p>A namespace in <code class="docutils literal notranslate"><span class="pre">cluster-scope/base/core/namespaces/$NAMESPACE_NAME</span></code>.</p></li>
+<li><p>A blank user group for the <code class="docutils literal notranslate"><span class="pre">$TEAM_NAME</span></code> if it does not exist yet in the <code class="docutils literal notranslate"><span class="pre">cluster-scope/base/user.openshift.io/groups/$TEAM_NAME</span></code>.</p></li>
+<li><p>An RBAC component for the project admin role <code class="docutils literal notranslate"><span class="pre">RoleBinding</span></code> in <code class="docutils literal notranslate"><span class="pre">cluster-scope/components/namespace-admin-rolebinding/$TEAM_NAME</span></code> and maps it to the newly added namespace.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>opfcli create-project <span class="o">{</span>NAMESPACE_NAME<span class="o">}</span> <span class="o">{</span>TEAM_NAME<span class="o">}</span> -d <span class="s2">&quot;{NAMESPACE_DISPLAY_NAME}&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">INFO</span>[0000] writing group definition to /home/anand/Documents/4n4nd/hitchhikers-guide/pages/apps/cluster-scope/base/user.openshift.io/groups/demo-team
+<span class=" -Color -Color-Cyan">INFO</span>[0000] writing rbac definition to /home/anand/Documents/4n4nd/hitchhikers-guide/pages/apps/cluster-scope/components/project-admin-rolebindings/demo-team
+<span class=" -Color -Color-Cyan">INFO</span>[0000] writing namespace definition to /home/anand/Documents/4n4nd/hitchhikers-guide/pages/apps/cluster-scope/base/core/namespaces/demo-project
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="adding-namespace-resources-to-the-target-cluster">
+<h3>4. Adding namespace resources to the target cluster<a class="headerlink" href="#adding-namespace-resources-to-the-target-cluster" title="Permalink to this headline">¶</a></h3>
+<p>The following cell will add <code class="docutils literal notranslate"><span class="pre">../../../../base/core/namespaces/$NAMESPACE_NAME</span></code> as a resource to the kusomization for your target cluster (<code class="docutils literal notranslate"><span class="pre">cluster-scope/overlays/prod/$TARGET_CLUSTER/kustomization.yaml</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="nb">cd</span> cluster-scope/overlays/prod/<span class="o">{</span>TARGET_CLUSTER<span class="o">}</span>/ <span class="o">&amp;&amp;</span> kustomize edit add resource ../../../../base/core/namespaces/<span class="o">{</span>NAMESPACE_NAME<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="populate-your-team">
+<h3>5. Populate your team<a class="headerlink" href="#populate-your-team" title="Permalink to this headline">¶</a></h3>
+<p>By executing the next cell, you will add the users listed in <code class="docutils literal notranslate"><span class="pre">$NAMESPACE_ADMINS_LST</span></code> to the OpenShift group <code class="docutils literal notranslate"><span class="pre">$TEAM_NAME</span></code> making them namespace admins for the above added namespace.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>yq e -i <span class="s2">&quot;.users = {NAMESPACE_ADMINS}&quot;</span> cluster-scope/base/user.openshift.io/groups/<span class="o">{</span>TEAM_NAME<span class="o">}</span>/group.yaml
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="finalize">
+<h2>Finalize<a class="headerlink" href="#finalize" title="Permalink to this headline">¶</a></h2>
+<p>Please stage your changes and send them as a PR against the <a class="reference external" href="https://github.com/operate-first/apps">operate-first/apps</a> repository.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure that following files/ have been modified/added:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">cluster-scope/base/core/namespaces/$NAMESPACE_NAME/kustomization.yaml</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">cluster-scope/base/core/namespaces/$NAMESPACE_NAME/namespace.yaml</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">cluster-scope/base/user.openshift.io/groups/$TEAM_NAME/group.yaml</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">cluster-scope/base/user.openshift.io/groups/$TEAM_NAME/kustomization.yaml</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">cluster-scope/components/namespace-admin-rolebinding/$TEAM_NAME/kustomization.yaml</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">cluster-scope/components/namespace-admin-rolebinding/$TEAM_NAME/rbac.yaml</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">cluster-scope/overlays/prod/$TARGET_CLUSTER/kustomization.yaml</span></code></p></li>
+</ul>
+</div>
+<p>Once the PR is merged, all the desired changes should be applied and the listed users should have admin access to the specified namespaces in the target cluster.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git status
+<span class="o">!</span>git add .
+<span class="o">!</span>git commit -m <span class="s2">&quot;feat(onboarding): Add team {TEAM_NAME}&quot;</span>
+<span class="o">!</span>git push
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
+Your branch is up to date with &#39;origin/master&#39;.
+
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+    <span class=" -Color -Color-Red">modified:   cluster-scope/overlays/prod/emea/demo/kustomization.yaml</span>
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+    <span class=" -Color -Color-Red">cluster-scope/base/core/namespaces/demo-project/</span>
+    <span class=" -Color -Color-Red">cluster-scope/base/user.openshift.io/groups/demo-team/</span>
+    <span class=" -Color -Color-Red">cluster-scope/components/project-admin-rolebindings/demo-team/</span>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+[master bf5372e] feat(onboarding): Add team demo-team
+ 7 files changed, 41 insertions(+)
+ create mode 100644 cluster-scope/base/core/namespaces/demo-project/kustomization.yaml
+ create mode 100644 cluster-scope/base/core/namespaces/demo-project/namespace.yaml
+ create mode 100644 cluster-scope/base/user.openshift.io/groups/demo-team/group.yaml
+ create mode 100644 cluster-scope/base/user.openshift.io/groups/demo-team/kustomization.yaml
+ create mode 100644 cluster-scope/components/project-admin-rolebindings/demo-team/kustomization.yaml
+ create mode 100644 cluster-scope/components/project-admin-rolebindings/demo-team/rbac.yaml
+Enumerating objects: 37, done.
+Counting objects: 100% (37/37), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (24/24), 2.29 KiB | 2.29 MiB/s, done.
+Total 24 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 9 local objects.
+To https://github.com/4n4nd/apps.git
+   da4a111..bf5372e  master -&gt; master
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+
+
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="getting_started.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Getting started with Operate First</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="onboarding_new_cluster.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How to add a new cluster to Operate First</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+
+          By Operate First<br/>
+
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
